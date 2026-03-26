@@ -7,20 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <style>
-    /* 폰트 및 글자 크기, 색상 정의 */
     body {
       font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px; /* 레퍼런스 표준 크기 */
+      font-size: 14px;
       color: #333;
       background-color: #ffffff;
       margin: 0; padding: 0;
     }
     a { color: #111; text-decoration: none; font-weight: 600; }
-    a:hover { color: #5dade2; text-decoration: underline; } /* 링크 호버 시 연한 하늘색 */
+    a:hover { color: #5dade2; text-decoration: underline; }
     
     .name {
       font-family: 'Inter', sans-serif;
-      font-size: 32px; /* 레퍼런스 이름 크기 */
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: -1.5px;
       color: #000;
@@ -28,24 +27,45 @@
     h2 {
       font-size: 18px;
       font-weight: 700;
-      border-bottom: 2px solid #5dade2; /* 섹션 구분선 연한 하늘색 */
+      border-bottom: 2px solid #5dade2;
       padding-bottom: 5px;
       margin-top: 40px;
       color: #111;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    /* 제목과 우측 정보를 정렬하기 위한 컨테이너 */
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+      margin-bottom: 4px;
+    }
     .papertitle { font-weight: 700; color: #000; font-size: 15px; }
     
-    /* 영어 Bio 강조용 */
-    strong { color: #000; font-weight: 600; }
+    /* 우측 강조 텍스트 및 배지 스타일 */
+    .meta-info { font-size: 13px; color: #666; font-weight: 500; }
+    .badge {
+      background-color: #5dade2;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: 8px;
+    }
 
-    ul { margin: 5px 0; padding-left: 18px; list-style-type: square; }
+    ul { margin: 8px 0; padding-left: 18px; list-style-type: square; }
     li { margin-bottom: 4px; line-height: 1.5; }
     
     table { width: 100%; border: 0; border-spacing: 0; border-collapse: separate; }
     .main-table { max-width: 800px; margin: 0 auto; }
     .project-img { width: 180px; height: 100px; object-fit: cover; border-radius: 6px; border: 1px solid #eee; }
+    
+    .content-cell { padding: 20px; vertical-align: middle; }
+    .highlight-bg { background-color: #f0f8ff; }
   </style>
 </head>
 
@@ -54,7 +74,7 @@
     <tbody>
       <tr>
         <td style="padding: 40px 2.5% 20px 2.5%;">
-          <table>
+          <table style="width:100%; border:0;">
             <tr>
               <td style="width:63%; vertical-align:middle; padding-right: 20px;">
                 <p class="name">Sangwoo Kim</p>
@@ -63,7 +83,7 @@
                   Specializing in <strong>3D Reconstruction</strong> and <strong>Agentic AI</strong>, 
                   I excel at optimizing complex algorithms to run efficiently on edge devices and real hardware.
                 </p>
-                <p style="text-align:left; margin-top: 20px;">
+                <p style="text-align:left; margin-top: 25px;">
                   <a href="mailto:swjohn0121@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="https://github.com/Underove" target="_blank">Github</a> &nbsp;/&nbsp;
                   <a href="tel:010-7378-4886">Contact</a>
@@ -81,22 +101,31 @@
         <td style="padding: 10px 2.5%;">
           <h2>Experience & Awards</h2>
           <table>
-            <tr bgcolor="#f0f8ff">
-              <td style="padding: 20px; vertical-align: middle;">
-                <span class="papertitle">인공지능 및 빅데이터 연합동아리 ToBig's</span><br>
-                23기 운영부장 및 부원 활동 수료 (2025.01 ~ 2026.01)
+            <tr class="highlight-bg">
+              <td class="content-cell">
+                <div class="title-row">
+                  <span class="papertitle">인공지능 및 빅데이터 연합동아리 ToBig's</span>
+                  <span class="meta-info">2025.01 ~ 2026.01</span>
+                </div>
+                23기 운영부장 및 부원 활동 수료
               </td>
             </tr>
             <tr>
-              <td style="padding: 20px; vertical-align: middle;">
-                <span class="papertitle">중앙대학교 공과대학 항공우주 동아리 MACH</span><br>
-                12기 회전익(드론) 제어팀 활동 및 비행 안정성 제어 시스템 연구 (2024.03 ~ 2024.09)
+              <td class="content-cell">
+                <div class="title-row">
+                  <span class="papertitle">중앙대학교 공과대학 항공우주 동아리 MACH</span>
+                  <span class="meta-info">2024.03 ~ 2024.09</span>
+                </div>
+                12기 회전익(드론) 제어팀 활동 및 비행 안정성 제어 시스템 연구
               </td>
             </tr>
-            <tr bgcolor="#f0f8ff">
-              <td style="padding: 20px; vertical-align: middle;">
-                <span class="papertitle">중앙대학교 ALCP 자기주도학습 우수상</span><br>
-                1축 위성 자세 제어 시스템 설계 및 구현 스터디 (교내 우수상)
+            <tr class="highlight-bg">
+              <td class="content-cell">
+                <div class="title-row">
+                  <span class="papertitle">중앙대학교 ALCP 자기주도학습</span>
+                  <span class="badge">교내 우수상</span>
+                </div>
+                1축 위성 자세 제어 시스템 설계 및 구현 스터디
               </td>
             </tr>
           </table>
@@ -107,10 +136,13 @@
         <td style="padding: 10px 2.5%;">
           <h2>Projects</h2>
           <table>
-            <tr bgcolor="#f0f8ff">
+            <tr class="highlight-bg">
               <td style="padding: 20px; width: 30%;"><img src="images/Curat3R.PNG" class="project-img"></td>
-              <td style="padding: 20px; width: 70%; vertical-align: middle;">
-                <span class="papertitle">ToBig's 21st Converence: [Curat3R: 나만의 3D 박물관 만들기]</span><br>
+              <td style="padding: 20px 20px 20px 0; width: 70%; vertical-align: middle;">
+                <div class="title-row">
+                  <span class="papertitle">Curat3R: 나만의 3D 박물관 만들기</span>
+                  <span class="meta-info">ToBig's 21st Conference</span>
+                </div>
                 <ul>
                   <li>CLIP(ViT-B/32) 기반 Semantic Filtering 설계로 부적합 객체 사전 판별 및 리소스 최적화</li>
                   <li>SPAR3D(0.7초 추론) 및 TRELLIS.2 결합 Dual-Track Inference로 생성 속도/품질 확보</li>
@@ -120,8 +152,11 @@
 
             <tr>
               <td style="padding: 20px; width: 30%;"><img src="images/Pi-FiFi.JPG" class="project-img"></td>
-              <td style="padding: 20px; width: 70%; vertical-align: middle;">
-                <span class="papertitle">ToBig's 20th Converence: [Pi-FiRi: 라즈베리파이 기반 지능형 화재 감지 로봇 시스템]</span><br>
+              <td style="padding: 20px 20px 20px 0; width: 70%; vertical-align: middle;">
+                <div class="title-row">
+                  <span class="papertitle">Pi-FiRi: 지능형 화재 감지 로봇 시스템</span>
+                  <span class="meta-info">ToBig's 20th Conference</span>
+                </div>
                 <ul>
                   <li>Flask 기반 추론·주행 제어 분리 설계로 기기 연산 부하 해결 및 10 FPS 확보</li>
                   <li>Solar Pro 2 기반 JSON Schema 적용 자동 순찰 보고서 생성 및 Q&A 기능 구현</li>
@@ -129,10 +164,16 @@
               </td>
             </tr>
 
-            <tr bgcolor="#f0f8ff">
+            <tr class="highlight-bg">
               <td style="padding: 20px; width: 30%;"><img src="images/LG_Aimers.jpg" class="project-img"></td>
-              <td style="padding: 20px; width: 70%; vertical-align: middle;">
-                <span class="papertitle">LG Aimers 7기: 식음업장 메뉴 수요 예측 AI 모델 (최종 5위)</span><br>
+              <td style="padding: 20px 20px 20px 0; width: 70%; vertical-align: middle;">
+                <div class="title-row">
+                  <span class="papertitle">LG Aimers 7기: 식음업장 메뉴 수요 예측 AI 모델</span>
+                  <div style="display: flex; align-items: center;">
+                    <span class="meta-info">최종 5위</span>
+                    <span class="badge">수상</span>
+                  </div>
+                </div>
                 <ul>
                   <li>휴일 및 주변 관광지 내장객 수 등 외부 변수 피처화 및 BiLSTM 맥락 학습 적용</li>
                   <li>커스텀 손실 함수(SMAPE) 직접 구현을 통해 성능 약 22% 개선</li>
@@ -142,8 +183,11 @@
 
             <tr>
               <td style="padding: 20px; width: 30%;"><img src="images/부산대.jpg" class="project-img"></td>
-              <td style="padding: 20px; width: 70%; vertical-align: middle;">
-                <span class="papertitle">2024 부산대학교 총장배 창의비행체 경진대회 (본선 진출)</span><br>
+              <td style="padding: 20px 20px 20px 0; width: 70%; vertical-align: middle;">
+                <div class="title-row">
+                  <span class="papertitle">부산대학교 총장배 창의비행체 경진대회</span>
+                  <span class="badge">본선 진출</span>
+                </div>
                 <ul>
                   <li>고정익 추종 촬영을 위한 2축 짐벌 및 리트랙팅 랜딩기어 시스템 제어 알고리즘 설계</li>
                   <li>HC-12 RF 모듈을 활용한 지상 관제소-드론 간 1km 대역 원격 명령 체계 구축</li>
@@ -151,11 +195,13 @@
               </td>
             </tr>
 
-            <tr bgcolor="#f0f8ff">
-              </td>
+            <tr class="highlight-bg">
               <td style="padding: 20px; width: 30%;"><img src="images/IMG_4057.PNG" class="project-img"></td>
-              <td style="padding: 20px; width: 70%; vertical-align: middle;">
-                <span class="papertitle">2025 제 2회 MixUP AI Datathon Track 1 총괄 운영 및 출제위원</span><br>
+              <td style="padding: 20px 20px 20px 0; width: 70%; vertical-align: middle;">
+                <div class="title-row">
+                  <span class="papertitle">제 2회 MixUP AI Datathon 운영 및 출제</span>
+                  <span class="meta-info">Track 1 총괄 운영</span>
+                </div>
                 <ul>
                   <li>관로 ID별 분할 로직 설계로 리더보드 무결성 확보</li>
                   <li>DACON Bias-A-Thon: CoT 기반 프롬프팅으로 LLM 응답 중립성 강화 프로세스 정립</li>
